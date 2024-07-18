@@ -87,10 +87,6 @@ app.use("/api/v1/product", productRoutes);
 app.use(express.static(path.join(__dirname, "./client/build")));
 
 // Default route
-app.get("/", (req, res) => {
-  res.send("<h1>Welcome to ecommerce app</h1>");
-});
-
 // Set the port
 const PORT = process.env.PORT || 8080;
 
