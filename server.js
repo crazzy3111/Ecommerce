@@ -84,10 +84,10 @@ app.use("/api/v1/category", categoryRoutes);
 app.use("/api/v1/product", productRoutes);
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, "./client/build")));
+app.use(express.static(path.join(__dirname, "./build")));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./client/build/index.html"));
+  res.sendFile(path.resolve(__dirname, "./build/index.html"));
 });
 
 // Set the port
