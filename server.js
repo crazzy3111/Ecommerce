@@ -86,7 +86,10 @@ app.use("/api/v1/product", productRoutes);
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "./client/build")));
 
-// Default route
+app.get("/", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./client/build/index.html"));
+});
+
 // Set the port
 const PORT = process.env.PORT || 8080;
 
